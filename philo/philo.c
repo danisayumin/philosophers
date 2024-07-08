@@ -1,22 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 17:36:23 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/07/06 17:38:37 by danielasayu      ###   ########.fr       */
+/*   Created: 2024/07/06 17:34:14 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/07/06 17:38:35 by danielasayu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#include "philo.h"
 
-#include <stdio.h>//verificar se é necessário
-#include <stdlib.h>
-#include <pthread.h>
-#include <unistd.h>
-#include <sys/time.h>
-
-#endif
