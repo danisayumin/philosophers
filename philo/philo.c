@@ -3,12 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:34:14 by danielasayu       #+#    #+#             */
-/*   Updated: 2024/07/06 17:38:35 by danielasayu      ###   ########.fr       */
+/*   Updated: 2024/07/08 15:50:29 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+int	main(int argc, char **argv)
+{
+	if(argc == 5 || 6 == argc)
+	{
+		printf("Correct!\n");
+		
+	}
+	else
+	{
+		printf("Error!\n");
+	}
+}

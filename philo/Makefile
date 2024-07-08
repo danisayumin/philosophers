@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+         #
+#    By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 17:21:19 by danielasayu       #+#    #+#              #
-#    Updated: 2024/07/06 17:30:00 by danielasayu      ###   ########.fr        #
+#    Updated: 2024/07/08 15:45:22 by dsayumi-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,6 @@ PHILO_NAME = philo
 #### Compiler #### 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LIBFT		=	./libft/libft.a
-LIBFT_DIR	=	./libft
-INCLUDES = -I./include -I$(LIBFT_DIR)
 
 #### Colors ####
 RED = \033[0;31m
@@ -44,7 +41,6 @@ all: $(PROJECT_NAME)
 
 $(PROJECT_NAME):
 	@echo "$(YELLOW) ⟦ Compilando⟧ $(RESET)"
-	@make -C $(LIBFT_DIR) --silent
 	@make $(PHILO_NAME)
 	@echo "$(GREEN)✓ Compilado com sucesso $(RESET)"
 
@@ -55,7 +51,6 @@ clean:
 fclean:
 	@rm -f $(OBJS)
 	@rm -f $(PHILO_NAME)
-	@make fclean -C $(LIBFT_DIR) --silent
 	@echo "$(RED)✗ Objetos Removidos $(RESET)"
 	@echo "$(RED)✗ Executavel $(PHILO_NAME) Removido $(RESET)"
 	@echo "$(RED)✗✗✗✗✗ Removi a porra toda 😎 ✗✗✗✗✗$(RESET)"
