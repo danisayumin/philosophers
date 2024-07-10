@@ -6,7 +6,7 @@
 #    By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 17:21:19 by danielasayu       #+#    #+#              #
-#    Updated: 2024/07/08 15:45:22 by dsayumi-         ###   ########.fr        #
+#    Updated: 2024/07/09 15:30:52 by dsayumi-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,4 +63,4 @@ test:
 
 re: fclean all
 
-.PHONY: all clean fclean re testss
+.PHONY: all clean fclean re test

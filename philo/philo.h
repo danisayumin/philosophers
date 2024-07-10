@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 17:36:23 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/07/08 15:47:45 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:52:44 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 #include <stdbool.h>
 #include <limits.h>// talvez nao precise, so fazer uma verificação na atoi pra nao aceita negativos
 
-int	main(int argc, char **argv);
+int		main(int argc, char **argv);
+void	parse_input(t_table *table, char **argv);
 
 typedef pthread_mutex_t	t_mtx;
 typedef struct s_table	t_table;
