@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:34:14 by danielasayu       #+#    #+#             */
-/*   Updated: 2024/07/09 17:53:38 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:49:47 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	main(int argc, char **argv)
 {
-	if(argc == 5 || 6 == argc)
+	t_table	table;
+
+	if (argc == 5 || 6 == argc)
 	{
-		printf("Correct!\n");
-		parse_input(argv);
+		parse_input(&table, argv);
+		data_init(&table);
 	}
 	else
 	{
