@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:52:10 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/07/09 18:08:26 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2024/07/12 16:40:42 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	parse_input(t_table *table, char **argv)
 		table->nbr_limit_meals = ft_atol(argv[5]);
 	else
 		table->nbr_limit_meals = -1;
-	table->start_simulation = get_time();//cuidar dos leaks aqui(talvez)
+	table->start_simulation = gettimeofday();//cuidar dos leaks aqui(talvez)
 	table->end_simulation = false;
 }
 // ./philo 5 800 200 200
