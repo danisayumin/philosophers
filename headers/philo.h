@@ -6,13 +6,14 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 17:36:23 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/10/04 21:33:56 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2024/10/04 21:44:21 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
 
+# include "../libft/libft.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>

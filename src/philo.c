@@ -3,14 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:34:14 by danielasayu       #+#    #+#             */
-/*   Updated: 2024/08/28 18:07:59 by danielasayu      ###   ########.fr       */
+/*   Updated: 2024/10/04 21:42:58 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int	ft_validate(char **argv)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (argv[i])
+	{
+		j = 0;
+		while (argv[i][j])
+		{
+			if (!ft_isdigit(argv[i][j]))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
 
 int	main(int argc, char **argv)
 {
@@ -18,6 +38,11 @@ int	main(int argc, char **argv)
 
 	if (argc == 5 || argc == 6)
 	{
+		if (ft_validate(argv + 1))
+		{
+			error_exit("Input Error: Invalid input");
+			return (1);
+		}
 		parse_input(&data, argv);
 		data_init(&data);
 		sim_start(&data);
