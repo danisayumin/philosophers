@@ -29,7 +29,7 @@ $(LIBFT):
 	@make -C $(LIBFT_PATH)
 
 $(NAME): $(LIBFT) $(OBJS)
-	@$(CC) -o $(NAME) $(OBJS) $(LIBFT)
+	@$(CC) -o $(NAME) $(OBJS) $(LIBFT) -pthread
 
 clean:
 	@make clean -C $(LIBFT_PATH)

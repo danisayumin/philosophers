@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 17:36:23 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/10/01 19:00:39 by danielasayu      ###   ########.fr       */
+/*   Updated: 2024/10/04 21:33:56 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 
 # define PH_MAX 200
 
-//ANSI Escape Sequences for text formatting*****
 # define RESET		"\033[0m"
 # define RED		"\033[1;31m"
 # define GREEN		"\033[1;32m"
@@ -35,17 +34,14 @@
 //DATA STRUCTS*****
 typedef struct s_data	t_data;
 
-//Define t_mtx here to use its shortened name throughout our codes
 typedef pthread_mutex_t	t_mtx;
 
-//For each fork
 typedef struct s_fork
 {
 	t_mtx		fork_mutex;
 	int			fork_id;
 }				t_fork;
 
-//For each philosopher
 typedef struct s_ph
 {
 	int			ph_id;
@@ -59,7 +55,6 @@ typedef struct s_ph
 	t_data		*data;
 }				t_ph;
 
-//For managing the rules of the mandatory part
 typedef struct s_data
 {
 	long			ph_total;
@@ -78,7 +73,6 @@ typedef struct s_data
 	t_mtx			write_mutex;
 }					t_data;
 
-//For representing a philosoper's state during a simulation
 typedef enum e_status
 {
 	THINKING,
@@ -89,7 +83,6 @@ typedef enum e_status
 	DIED,
 }			t_ph_status;
 
-//For representing units of time for measuring durations with gettime()
 typedef enum e_time_unit
 {
 	SECONDS,
@@ -97,7 +90,6 @@ typedef enum e_time_unit
 	MICROSECONDS,
 }		t_time_unit;
 
-//For representing thread and mutex functions for cleaner readability
 typedef enum e_ftcode
 {
 	INIT,

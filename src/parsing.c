@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:52:10 by dsayumi-          #+#    #+#             */
-/*   Updated: 2024/08/28 18:07:31 by danielasayu      ###   ########.fr       */
+/*   Updated: 2024/10/04 21:26:47 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,53 +22,29 @@ static bool	is_digit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-static int	input_error(int code)
-{
-	if (code == 1)
-	{
-		error_exit("Input Error: Positive values only");
-		return (1);
-	}
-	if (code == 2)
-	{
-		error_exit("Input Error: Digit values only");
-		return (1);
-	}
-	if (code == 3)
-	{
-		error_exit("Input Error: The value cannot exceed 2147483647");
-		return (1);
-	}
-	return (0);
-}
-
 static long	ft_atol(const char *s)
 {
-	int		len;
 	long	res;
 
 	while (whitespace(*s))
-		++s;
+		s++;
 	if (*s == '-')
-		input_error(1);
+		return (0);
 	if (!is_digit(*s))
-		input_error(2);
-	len = 0;
+	{
+		error_exit("Input Error: Digit values only");
+		return (0);
+	}
 	res = 0;
 	while (is_digit(*s))
-	{
 		res = (res * 10) + (*s++ - '0');
-		len++;
-	}
-	if (len > 10 || res > INT_MAX)
-		input_error(3);
 	return (res);
 }
 
 void	parse_input(t_data *data, char **argv)
 {
 	data->ph_total = ft_atol(argv[1]);
-	if (data->ph_total > PH_MAX)
+	if (data->ph_total > PH_MAX || data->ph_total < 1)
 	{
 		error_exit("Input Error: Total number of philos cannot exceed 200");
 		return ;
